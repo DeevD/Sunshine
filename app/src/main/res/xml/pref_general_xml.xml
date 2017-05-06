@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<PreferenceScreen
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory
+
+        android:title="Fill your Location (Such as Yangon,MM)">
+    </PreferenceCategory>
+
+    <EditTextPreference
+        android:layout_width="match_parent"
+        android:defaultValue="@string/pref_location_default"
+        android:inputType="text"
+        android:key="@string/pref_location_key"
+        android:singleLine="true"
+        android:title="@string/pref_location_label" />
+
+    <PreferenceCategory
+        android:title="Celsius or Fahrenheit">
+    </PreferenceCategory>
+    <ListPreference
+        android:defaultValue="@string/pref_units_metric"
+        android:entries="@array/pref_units_options"
+        android:entryValues="@array/pref_units_values"
+        android:key="@string/pref_units_key"
+        android:title="@string/pref_units_label" />
+
+    <ListPreference
+        android:defaultValue="@string/pref_color_red_value"
+        android:entries="@array/pref_color_options"
+        android:entryValues="@array/pref_color_values"
+        android:key="@string/pref_color_key"
+        android:title="Color">
+    </ListPreference>
+
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/default_key_bool"
+        android:key="@string/bool"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="CheckBox">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/default_key_bool"
+        android:key="@string/language_mm"
+        android:summaryOn="MM"
+        android:summaryOff="English"
+        android:title="MM language">
+
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/pref_default_location"
+        android:key="@string/pref_location_text_key"
+        android:summaryOn="On"
+        android:summaryOff="Off"
+        android:title="Location"
+        ></CheckBoxPreference>
+
+
+</PreferenceScreen>
